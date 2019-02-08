@@ -1,0 +1,19 @@
+{
+  "name": "oauth2-server",
+  "version": "1.0.0",
+  "description": "Authorization server implementing the Authorisation Code Grant (Section 4.1)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antoniogamiz/oauth2-server.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/antoniogamiz/oauth2-server/issues"
+  },
+  "homepage": "https://github.com/antoniogamiz/oauth2-server#readme"
+}
