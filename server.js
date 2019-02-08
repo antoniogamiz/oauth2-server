@@ -5,6 +5,8 @@ require("dotenv").config();
 
 const app = express();
 
+const port = process.env.SERVER_PORT || 3001;
+
 app.get("/", function(req, res) {
   res.send("Hello World!");
 });
@@ -12,6 +14,6 @@ app.get("/", function(req, res) {
 app.use(bodyParser.json({ limit: "50mb" }));
 app.use(bodyParser.urlencoded({ limit: "50mb", extended: true }));
 
-app.listen(process.env.SERVER_PORT, () => {
-  console.log(`Listening on port ${process.env.SERVER_PORT}`);
+app.listen(port, () => {
+  console.log(`Listening on port ${port}`);
 });

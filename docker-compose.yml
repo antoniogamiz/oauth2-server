@@ -1,18 +1,15 @@
-version: "3"
+version: "2"
+
 services:
   oauth2-server:
-    build: .
     container_name: "oauth2-server"
-    image: debian/latest
+    image: https://github.com/antoniogamiz/oauth2-server.git
     environment:
-      - NODE_ENV=development
-      - FOO=bar
+      - SERVER_PORT=5000
     volumes:
-      - .:/var/www:rw
-      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - .:/usr/src
     ports:
-      - 3000:3000
-      - 9000:9000
+      - 5000:5000
     links:
       - mongodb
     depends_on:
