@@ -1,9 +1,13 @@
 const path = require("path");
 const express = require("express");
 const bodyParser = require("body-parser");
+const mongoose = require("mongoose");
 require("dotenv").config();
 
 const app = express();
+setTimeout(() => {
+  mongoose.connect("mongodb://mongodb:27017/test", { useNewUrlParser: true });
+}, 10000);
 
 const port = process.env.SERVER_PORT || 3001;
 
