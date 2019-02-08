@@ -5,6 +5,6 @@ WORKDIR /usr/src
 RUN npm install
 COPY . /usr/src
 
-EXPOSE 5000
+EXPOSE 3001
 
 CMD node server.js
