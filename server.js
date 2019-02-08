@@ -5,9 +5,10 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 
 const app = express();
-setTimeout(() => {
-  mongoose.connect("mongodb://mongodb:27017/test", { useNewUrlParser: true });
-}, 10000);
+
+mongoose
+  .connect("mongodb://mongodb:27017/test", { useNewUrlParser: true })
+  .then(console.log("Connected to MongoDB..."));
 
 const port = process.env.SERVER_PORT || 3001;
 
