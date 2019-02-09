@@ -6,11 +6,11 @@ require("dotenv").config();
 
 const app = express();
 
-// mongoose
-//   .connect(process.env.MONGO_URL, {
-//     useNewUrlParser: true
-//   })
-//   .then(console.log("Connected to MongoDB..."));
+mongoose
+  .connect(process.env.MONGO_URL, {
+    useNewUrlParser: true
+  })
+  .then(console.log("Connected to MongoDB..."));
 
 const port = process.env.SERVER_PORT || 3001;
 
