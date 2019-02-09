@@ -22,5 +22,3 @@ module.export = {
   key: key,
   hash: hash
 };
-
-console.log(key("google"));

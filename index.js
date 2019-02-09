@@ -3,14 +3,16 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 require("dotenv").config();
-
+const APIKey = require("./src/database/models/apiKey");
 const app = express();
 
 mongoose
   .connect(process.env.MONGO_URL, {
-    useNewUrlParser: true
+    useNewUrlParser: true,
+    user: process.env.MONGO_OAUTH_USER,
+    pass: process.env.MONGO_OAUTH_PASS
   })
-  .then(console.log("Connected to MongoDB..."));
+  .then(console.log("Connected to MongoDB..."), err => console.log(err));
 
 const port = process.env.SERVER_PORT || 3001;
 

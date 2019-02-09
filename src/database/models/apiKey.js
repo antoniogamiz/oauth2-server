@@ -10,8 +10,8 @@ const APIKeySchema = new Schema({
   date: { type: Date, default: Date.now }
 });
 
-APIKey.statics.validKey = key => {
+APIKeySchema.statics.validKey = key => {
   this.model("APIKey").find({ hash: generator.hash(key) });
 };
 
-const APIKey = mongoose.model("APIKey", APIKeySchema);
+module.exports = mongoose.model("apikeys", APIKeySchema);
