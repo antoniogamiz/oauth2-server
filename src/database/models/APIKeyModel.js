@@ -14,4 +14,4 @@ APIKeySchema.statics.validKey = key => {
   this.model("APIKey").find({ hash: generator.hash(key) });
 };
 
-module.exports = mongoose.model("apikeys", APIKeySchema);
+module.exports = mongoose.model("APIKey", APIKeySchema);

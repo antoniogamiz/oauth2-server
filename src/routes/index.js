@@ -1,5 +1,5 @@
-const oauthAPI = require("./oauthAPI");
+const oauthRouter = require("./oauthAPI");
 
 module.exports = app => {
-  oauthAPI(app);
+  app.use("/api/oauth", oauthRouter);
 };
