@@ -29,7 +29,7 @@ class MongoLib {
     });
   }
 
-  async addUser(collection, { username, password }) {
+  addUser(collection, { username, password }) {
     return this.connect().then(db => {
       return db
         .collection(collection)
@@ -44,7 +44,7 @@ class MongoLib {
     });
   }
 
-  async getUser(collection, username) {
+  getUser(collection, username) {
     return this.connect().then(db => {
       return db
         .collection(collection)
@@ -53,10 +53,5 @@ class MongoLib {
     });
   }
 }
-
-let c = new MongoLib();
-
-c.getUser("users", "pepito").then(result => console.log(result));
-c.getUser("users", "pepito").then(result => console.log(result));
 
 module.exports = MongoLib;

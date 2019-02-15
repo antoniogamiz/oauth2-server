@@ -22,7 +22,7 @@ services:
       - .env
     volumes:
       - ~/data/db:/data/db
-      - ./src/database/mongod.conf:/etc/mongod.conf
+      - ./src/config/mongod.conf:/etc/mongod.conf
     ports:
       - 27017:27017
     command: mongod --smallfiles --logpath=/dev/null --config /etc/mongod.conf

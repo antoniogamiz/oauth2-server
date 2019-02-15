@@ -16,9 +16,3 @@ class UsersService {
     return userId;
   }
 }
-
-let c = new UsersService();
-
-c.createUser({ username: "pepitoddddddss3dd", password: "grillo" }).then(id =>
-  console.log(id)
-);
